@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://msb5deloeuxg"]
+
+[ext_resource type="Script" uid="uid://cjvt32g3u7ifa" path="res://player.gd" id="1_fleov"]
+[ext_resource type="Texture2D" uid="uid://f8jok5is5kvb" path="res://Goblin_normal_01.png" id="2_8iprx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4f63q"]
+
+[sub_resource type="Animation" id="Animation_f0mnc"]
+resource_name = "Player walk down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_nncel"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c1i20"]
+_data = {
+&"Player walk down": SubResource("Animation_f0mnc"),
+&"RESET": SubResource("Animation_nncel")
+}
+
+[node name="player" type="CharacterBody2D" unique_id=1505668218]
+script = ExtResource("1_fleov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1464472973]
+shape = SubResource("CircleShape2D_4f63q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729356384]
+position = Vector2(468.00003, 373)
+scale = Vector2(0.41796884, 0.49462897)
+texture = ExtResource("2_8iprx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=883587760]
+libraries/ = SubResource("AnimationLibrary_c1i20")

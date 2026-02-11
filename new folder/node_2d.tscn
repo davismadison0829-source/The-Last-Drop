@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://nm51cpwea2ne"]
 
-[ext_resource type="Texture2D" uid="uid://f8jok5is5kvb" path="res://Goblin_normal_01.png" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://cm2arxqam8aq6" path="res://wooden_interior_tileset.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://f8jok5is5kvb" path="res://Goblin_normal_01.png" id="1_4fg7p"]
+[ext_resource type="Texture2D" uid="uid://cm2arxqam8aq6" path="res://wooden_interior_tileset.png" id="2_gvocl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_gvocl")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 1:0/0 = 0
@@ -35,8 +35,8 @@ sources/0 = SubResource("TileSetAtlasSource_0hol4")
 position = Vector2(62, 255)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=402972120]
-position = Vector2(303, -1)
-texture = ExtResource("1_0e48y")
+position = Vector2(782, 1229)
+texture = ExtResource("1_4fg7p")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=847110476]
 tile_set = SubResource("TileSet_q6r6c")
